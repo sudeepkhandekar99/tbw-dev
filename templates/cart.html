@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %} Cart {% endblock %}
+
+{% block content %}
+    <!--===== CART =====-->
+
+    <div class="products-container">
+        <div class="product-header">
+            <h5 class="product-title">PRODUCT</h5>
+            <h5 class="quantity">Color</h5>
+            <h5 class="price">PRICE</h5>
+            <h5 class="price">SIZE</h5>
+            <h5 class="quantity">QUANTITY</h5>
+            <h5 class="total">TOTAL</h5>
+        </div>
+        <div class="products"></div>
+    </div>
+
+    {% for item in items %}
+    <div class="product-header" style = "align-items : flex-start">
+        <img class="cart_img" src={{item.product.img.url}} alt="">
+        {% comment %} <h5 class="product-title-name">{{item.product.name}}</h5> {% endcomment %}
+        <h5 class="quantity">{{item.color}}</h5>
+        <h5 class="price">{{item.product.price}}</h5>
+        <h5 class="price">{{item.size}}</h5>
+        <div class="quantity">
+            <h5 class="quantity">{{item.quantity}}</h5>
+            <img data-product="{{item.product.id}}" data-finalcolor = {{item.color}} data-size = {{item.size}} data-action="add" class="chg-quantity update-cart" src="static/img/arrow-up.png">
+            <img data-product="{{item.product.id}}" data-finalcolor = {{item.color}} data-size = {{item.size}} data-action="remove" class="chg-quantity update-cart" src="static/img/arrow-down.png">
+        </div>
+        <h5 class="total">{{item.get_total|floatformat:2}}</h5>
+    </div>
+    {% endfor %}
+
+    <h3>
+        <center>Total = {{order.get_cart_total|floatformat:2}}</center>
+        {% if order.get_cart_total != 0%}
+            <center><a class="chkBtn" href={% url 'checkout' %}>Checkout!!</a></center>
+        {%endif%}
+    </h3>
+    <!--===== MAIN JS =====-->
+    <script type="text/javascript" src="/static/js/cart_main.js"></script>
+    <script type="text/javascript" src="/static/js/main.js"></script>
+
+{% endblock %}

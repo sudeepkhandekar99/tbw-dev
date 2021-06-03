@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %} Shop {% endblock title %}
+
+{% block content %}
+<main class="l-main">
+        <section class="featured section" id="shop">
+                <h2 class="section-title">All Products</h2>
+
+                <div class="featured__container bd-grid">
+
+                        {% for product in products %}
+                                <article class="sneaker">
+                                        <img src={{product.img.url}} alt="" class="sneaker__img">
+                                        <span class="sneaker__name">{{product.name}}</span>
+                                        <span class="sneaker__preci"><span
+                                                        style="text-decoration: line-through;text-decoration-color:red;">₹
+                                                        {{product.priceNoDiscount}}</span><br>₹ {{product.price}}</span>
+                                        <a href= {% url 'product' product.id %} class="button-light sneaker__button">View<i
+                                                        class='bx bx-right-arrow-alt button-icon'></i></a>
+                                </article>
+                        {% endfor %}
+
+                </div>
+
+                <div class="sneaker__pages bd-grid">
+                        <div>
+                                <span class="sneaker__pag">1</span>
+                                <a href = {% url 'moreProducts' %} class="sneaker__pag">&#8594;</a>
+                        </div>
+                </div>
+        </section>
+</main>
+{% endblock content %}

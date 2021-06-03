@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+
+{% block content %}
+<div class="content">
+<main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home" id="home">
+            <div class="home__container bd-grid">
+                <div class="home__sneaker">
+                    <!-- <div class="home__shape"></div> -->
+                    <img class= "home__shape" src="/static/img/lologo.png" alt="" class="home__img">
+                </div>
+
+                <div class="home__data">
+                    <span class="home__new">The Blessed Wardrobe</span>
+                    <h1 class="home__title">TBW by <br>URVI DAMA</h1>
+                    <p class="home__description">Explore the new collections of the season</p>
+                    <a href="#new" class="button">Explore now</a>
+                </div>
+            </div>
+        </section>
+
+        <!--===== FEATURED =====-->
+        <section class="featured section" id="featured">
+            <h2 class="section-title">FEATURED</h2>
+            <!-- test -->
+            <div class="featured__container bd-grid">
+                {% for product in productsFeatured%}
+                    <article class="sneaker">
+                        <img src={{product.img.url}}  alt="" class="sneaker__img">
+                        <span class="sneaker__name">{{product.name}}</span>
+                        <span class="sneaker__preci">₹{{product.price}}</span>
+                        <a href={% url 'product' product.id%} class="button-light">View <i class='bx bx-right-arrow-alt button-icon'></i></a>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!--===== WOMEN SNEAKERS =====-->
+        <section class="women section" id="women">
+            <h2 class="section-title">#TRENDING</h2>
+
+            <div class="women__container bd-grid">
+                {% for product in productsTrending%}
+                    <article class="sneaker">
+                    <img src={{product.img.url}} alt="" class="sneaker__img">
+                    <span class="sneaker__name">{{product.name}}</span>
+                    <span class="sneaker__preci">₹{{product.price}}</span>
+                    <a href = {% url 'product' product.id%} class="button-light">View <i class='bx bx-right-arrow-alt button-icon'></i></a>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!--===== NEW COLLECTION =====-->
+        <section class="new section" id="new">
+            <h2 class="section-title">NEW COLLECTION</h2>
+
+            <div class="new__container bd-grid">
+                <div class="new__mens">
+                    <img src="/static/img/cover.png" alt="" class="new__mens-img">
+
+                    <h3 class="new__title">View all</h3>
+                    <span class="new__preci">by Urvi Dama</span>
+                    <a href="./shop" class="button-light">View Collection <i
+                            class='bx bx-right-arrow-alt button-icon'></i></a>
+                </div>
+
+                <div class="new__sneaker">
+                    {% for product in productsNewCol %}
+                        <div class="new__sneaker-card">
+                            <img src={{product.img.url}} alt="" class="new__sneaker-img">
+                            <div class="new__sneaker-overlay">
+                                <a href = {% url 'product' product.id%} class="button">View</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+        
+    </div>
+
+
+    <div class="preloader">
+        <div class="backdrop"></div>
+
+        <div class="dots-container">
+            <div class="dot red"></div>
+            <div class="dot green"></div>
+            <div class="dot yellow"></div>
+        </div>
+
+        <div class="preloader-text">
+            Loading
+        </div>
+    </div>
+
+{% endblock %}

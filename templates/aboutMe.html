@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <link rel="stylesheet" href="/static/about_assets/css/styles.css">
+
+    <!-- ICONS BOXICONS -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="static/img/lologo.png" type="image/icon type">
+</head>
+
+<body>
+    <!-- ===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <a href="/" class="nav__logo">TBW</a>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu-alt-right'></i>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="/#featured" class="nav__link">Featured</a></li>
+                    <li class="nav__item"><a href="/#women" class="nav__link">#Trending</a></li>
+                    <li class="nav__item"><a href={% url 'shop' %} class="nav__link">Shop</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===== SECTION =====-->
+        <section class="l-section" id="section">
+            <div class="section">
+                <div class="section__data">
+                    <h2 class="section__title">The Blessed Wardrobe</h2>
+                    <p class="section__text">was launched in 2018 by Urvi Dama for women of all
+                        sizes and ages. TBW offers an array of Indo western ethnic wear. Loved for cowls and drapes.<br>
+                        Founder and designer Urvi Dama, caught the entrepreneurial bug at a young age. Her clothing line
+                        debut was made through an exhibition in Mumbai during her college days at the age of 21, the
+                        exhibition was an absolute hit and all products were sold out on the first day itself. After that, there
+                        was no stopping for this young girl and her big dreams.<br>
+                </div>
+
+                <img src="/static/about_assets/img/imgm.jpg" alt="" class="section__img">
+            </div>
+        </section>
+        <section class="l-section" id="section">
+            <div class="section">
+                <div class="section__data">
+                    <h2 class="section__title">Journey so far</h2>
+                    <p class="section__text">TBW has done over 80+ exhibtions in
+                        Mumbai like The Lil Flea, Style cracker, The Wedding Junction show, Marriage Mantra etc.<br>After
+                        receiving love and appreciation from the women of Bombay, it was now time to expand TBW’s
+                        magic Pan India. TBW started supplying 20 + Multi designer stores all over India and now in
+                        2021, we are ready to explore the online world through this website.<br>Today Urvi along with
+                        her sister in law - Jasmeet Dama runs TBW with immense love and hardwork
+                        with the aim to dress all body types at a budget.<br>When asked what keeps them going on hard days and difficult times like covid,
+                        “OMG! It’s so pretty, You really have that in my size?” Is what keeps them going!</p>
+                </div>
+
+                <!-- <img src="assets/img/imgm.jpg" alt="" class="section__img"> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- RELLAX JS -->
+    <script src="/static/about_assets/js/rellax.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+    <!-- SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- MAIN JS -->
+    <script src="/static/about_assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+{% extends 'baseProduct.html' %}
+
+{%block title%} T8 {%endblock title%}
+
+{% block content %}
+    <main class="l-main">
+        <div class="product-images split lefttt">
+            <div class="product-imgs">
+                <div class="img-display">
+                    <div class="img-showcase">
+                        <img src="/static/pro/products/T8_img/1.jpg" alt="shoe image">
+                        <img src="/static/pro/products/T8_img/2.jpg" alt="shoe image">
+                        <img src="/static/pro/products/T8_img/3.jpg" alt="shoe image">
+                        <img src="/static/pro/products/T8_img/4.jpg" alt="shoe image">
+                    </div>
+                </div>
+                <div class="img-select">
+                    <div class="img-item">
+                        <a href="#" data-id="1">
+                            <img src="/static/pro/products/T8_img/1.jpg" alt="shoe image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="2">
+                            <img src="/static/pro/products/T8_img/2.jpg" alt="shoe image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="3">
+                            <img src="/static/pro/products/T8_img/3.jpg" alt="shoe image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="4">
+                            <img src="/static/pro/products/T8_img/4.jpg" alt="shoe image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper full-screen product-description split righttt">
+            <h2 class="quick-fix">Pant Saree</h2>
+            <p>
+                <small class="sale__productdes">SALE</small>
+                <span class="sale__productprice"
+                    style="text-decoration: line-through;text-decoration-color:red;">₹ 11,800</span>
+                <span class="sale__productprice">₹ 4,650</span>
+            <h4>Description</h4>
+                <hr size="1" width="100%" color="black">
+            <p class="des">
+                Fit : Fitted<br>
+                No. of pieces : 2<br>
+                Custom size : Yes <br>
+                Neck Type : Square<br>      
+                Silhouette : Indo Western<br>
+                Lining material : Santone/Butter Crepe<br>
+                Frabic composition : Georgette With Lucknowni<br>
+                Embroidery : Lucknowi Machine Work Embroidery<br>     
+            </p>
+            <div class="variations__color">
+                <h4>COLOR</h4>
+                <label for="" class="product-color">
+                    <input type="radio" name="color" id="radio_pistachio-green" checked value = "Pistachio Green">
+                    <span style="background-color: rgba(255, 255, 0, 0.274); padding: 2px; margin: 2px; color: black;">Pistachio Green</span>
+                </label>
+                <label for="" class="product-color">
+                    <input type="radio" name="color" id="radio_baby-pink" value = "Baby Pink">
+                    <span
+                        style="background-color: rgba(255, 192, 203, 0.473); padding: 2px; margin: 2px; color: black;">Baby Pink
+                        </span>
+                </label>
+            </div>
+            <div class="variations__size">
+                <h4>SIZE</h4>
+                <label for="" class="product-size">
+                    XS<input type="radio" name="size" checked id="radio_xs" value = "XS">
+                    <span></span>
+                </label>
+                <label for="" class="product-size">
+                    S<input type="radio" name="size" id="radio_s" value = "S">
+                    <span></span>
+                </label>
+                <label for="" class="product-size">
+                    M<input type="radio" name="size" id="radio_m" value = "M">
+                    <span></span>
+                </label>
+                <label for="" class="product-size">
+                    L<input type="radio" name="size" id="radio_l" value = "L">
+                    <span></span>
+                </label>
+                <label for="" class="product-size">
+                    XL<input type="radio" name="size" id="radio_xl" value = "XL">
+                    <span></span>
+                </label>
+                <label for="" class="product-size">
+                    Custom<input type="radio" name="size" id="radio_c" value = "C">
+                    <span></span>
+                </label>
+                <p>Note : We will contact you for custom size measurements once the order is placed.</p>
+            </div>
+            </p>
+
+            <div class="product-action-button">
+                <!-- <div class="quantity-control">
+                    <button>-</button>
+                    <input type="number" readonly>
+                    <button>+</button>
+                </div> -->
+                <div class="tocart-control">
+                    <button data-product='{{id}}' data-action="add" href="#" class="button preci__button update-cart">ADD TO CART</button>
+                </div>
+            </div>
+
+            <section class="long-des">
+                <div class="wrapper">
+                    <div class="long-des">
+                        <h4>Size Chart</h4>
+                        <table class="test">
+                            <tr>
+                                <td>Size</td>
+                                <td>Bust</td>
+                                <td>Waist</td>
+                                <td>Hip</td>
+                            </tr>
+                            <tr>
+                                <td>XS</td>
+                                <td>32</td>
+                                <td>25</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td>S</td>
+                                <td>34</td>
+                                <td>26</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td>M</td>
+                                <td>36</td>
+                                <td>28</td>
+                                <td>39</td>
+                            </tr>
+                            <tr>
+                                <td>L</td>
+                                <td>38</td>
+                                <td>30</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>XL</td>
+                                <td>40</td>
+                                <td>32</td>
+                                <td>42</td>
+                            </tr>
+                        </table>
+    
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        
+    </main>
+    <style>
+        
+        table.test td {
+            background-color: pink;
+            margin: 12px 12px 12px 12px;
+            padding: 12px 12px 12px 12px;
+            color: black;
+            align-items: center;
+            justify-content: center;
+        }
+        table.test {
+            border-collapse: separate;
+            border-spacing: 10px;
+            *border-collapse: expression('separate', cellSpacing='10px');
+            align-items: center;
+            justify-content: center;
+        }
+        .righttt{
+            margin-left: 2%;
+        }
+        @media screen and (min-width: 768px) {
+            .split {
+                height: 100%;
+                width: 50%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                overflow-x: hidden;
+                padding-top: 20px;
+            }
+            .quick-fix{
+            margin-top: 70px;
+        }
+            /* Control the left side */
+            .lefttt {
+                left: 0;
+                /* background-color: #111; */
+            }
+
+            /* Control the right side */
+            .righttt {
+                right: 0;
+                /* background-color: red; */
+            }
+            /* .footer{
+                margin-top: 120vh;
+            } */
+        }
+    </style>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        const imgs = document.querySelectorAll('.img-select a');
+        const imgBtns = [...imgs];
+        let imgId = 1;
+
+        imgBtns.forEach((imgItem) => {
+            imgItem.addEventListener('click', (event) => {
+                event.preventDefault();
+                imgId = imgItem.dataset.id;
+                slideImage();
+            });
+        });
+
+        function slideImage() {
+            const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+
+            document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+        }
+
+        window.addEventListener('resize', slideImage);
+    </script>
+{%endblock content%}
